@@ -71,6 +71,7 @@ Why? Let's assume nums[j] = nums[i-1] = 7, there's only 1 scenario, that is:
 i-1          | i             | j           
 ------------ | ------------- | -------------
 7            | 7             | 7            
+
 All numbers from nums[i-1] to nums[j] are the same! So nums[j] is at least a 3rd-time duplicate unsafe number. This is why we need to compare it with nums[i-1] instead of nums[i].
 
 To satisfy our curiosity - what happens when nums[j] != nums[i-1]? There are 3 scenarios: 
