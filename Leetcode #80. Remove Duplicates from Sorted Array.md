@@ -105,7 +105,7 @@ We can simplify it by using foreach loop since we are not interested in index j:
 class Solution {
     public int removeDuplicates(int[] nums) {
         int i = 0;
-        for (n : nums) {
+        for (int n : nums) {
             if (i < 1 || n != nums[i-1]) {
                 i++;
                 nums[i] = n;
