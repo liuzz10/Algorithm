@@ -51,7 +51,7 @@ So, we need one more step to check X:
 3. Check if knows(final candidate, k) == 0 && knows(k, final candidate) == 1. If true, it is the real celebrity that we are looking for.
 
 ### Time cost
-Therefore, T(n)=O(n). For step 1&2, T(n)=O(n) because the height of the tree is theta(n). For step 3, T(n)=O(n) because we will only need to compare with other n-1 numbers twice, (i, j) and (j, i). 
+Therefore, T(n)=O(n). For step 1&2, T(n)=O(n) because the height of the tree is theta(n). For step 3, T(n)=O(n) because we will only need to compare fianl candidate X with other n-1 numbers twice, (X, k) and (k, X). 
 
 
 ### Code
