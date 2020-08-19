@@ -12,7 +12,7 @@ For each number i, We need to check if i is a celebrity or not. How to check? We
 ### Time cost
 T(n) = O(n^2), since we need to check n numbers, and for each number we need to pair it with n-1 numbers to check. Another way to think about it is to check all n^2 pairs of knows(i, j).
 
-## Idea 2: Linear comparison
+## Idea 2: Linear Comparison
 Do we need to check all pairs of knows(i, j)? We don't.
 
 If i knows j, that means i is not the celebrity because a celebrity doesn't know anyone.
