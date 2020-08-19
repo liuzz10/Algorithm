@@ -29,9 +29,9 @@ Based on the above analysis, we design the algorithm below:
 1. Base case: i = 0, j = 1. We check knows(0, 1) and determine a potential candidate.
     * If knows(0, 1) = 1, j is the potential candidate.
     * If knows(0, 1) = 0, i is the potential candidate.
-2. After determining a candidate between 0 and 1, we need to compare the candidate i or j, with the 3rd number. Therefore, we need a for loop to always go to the next number that the candidate can compare to.
+2. After determining a candidate between 0 and 1, we need to compare the winning candidate, with a 3rd number Therefore, we need a for loop to always go to the next number so that the candidate can compare to.
     
-    For loop:
+    For loop where j traverses all numbers:
     * `if knows(candidate, j) == 1` we eliminate the current candidate and set `candidate = j`.
     * `if knows(candidate, j) == 0` we eliminate j=1 and keep the current candidate.
 
@@ -40,7 +40,6 @@ After running up all numbers, we will get a final candidate X. Also we know that
 Here is a tree that demonstrates all possible paths. At each level we will add a new number to compare with, so the height/time cost is theta(n). 
 
 ![](LC277-bg.png)
-
 
 Are we done? No. This final candidate X is just our best guess! Remember to check if X is the real celebrity!
 
