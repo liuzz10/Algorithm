@@ -15,9 +15,9 @@ T(n) = O(n^2), since we need to check n numbers, and for each number we need to 
 ## Idea 2: Linear Comparison
 Do we need to check all pairs of knows(i, j)? We don't.
 
-If i knows j, that means i is not the celebrity because a celebrity doesn't know anyone.
+If i knows j, that means i is not the celebrity because a celebrity doesn't know anyone. So we can eliminate i.
 
-If i doesn't know j, that means j is not the celebrity because everyone knows the celebrity.
+If i doesn't know j, that means j is not the celebrity because everyone knows the celebrity. So we can eliminate j.
 
 If you understand the above, you know two secrets of knows(i, j):
 * Secret 1. If knows(i, j) = 1, i is not the celebrity.
@@ -33,7 +33,7 @@ Based on the above analysis, we design the algorithm below:
     
     For loop where j traverses all numbers:
     * `if knows(candidate, j) == 1` we eliminate the current candidate and set `candidate = j`.
-    * `if knows(candidate, j) == 0` we eliminate j=1 and keep the current candidate.
+    * `if knows(candidate, j) == 0` we eliminate j and keep the current candidate.
 
 After running up all numbers, we will get a final candidate X. Also we know that, if a celebrity exists, it must be X.
 
