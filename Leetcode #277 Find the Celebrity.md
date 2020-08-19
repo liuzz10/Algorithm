@@ -19,9 +19,9 @@ If i knows j, that means i is not the celebrity because a celebrity doesn't know
 
 If i doesn't know j, that means j is not the celebrity because everyone knows the celebrity.
 
-If you understand the above, you know two properties of celebrity:
-* Property 1. If knows(i, j) = 1, i is not the celebrity.
-* Property 2. If knows(i, j) = 0, j is not the celebrity.
+If you understand the above, you know two secrets of knows(i, j):
+* Secret 1. If knows(i, j) = 1, i is not the celebrity.
+* Secret 2. If knows(i, j) = 0, j is not the celebrity.
 
 We will, and only will, get two results: 0 or 1 after calling `knows`. So with each call to `knows(i, j)`, we can eliminate a non-celebrity from n.
 
