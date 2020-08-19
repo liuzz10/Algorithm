@@ -39,7 +39,7 @@ After running up all numbers, we will get a final candidate X. Also we know that
 
 Here is a tree that demonstrates all possible paths. At each level we will add a new number to compare with, so the height/time cost is theta(n). 
 
-![](LC277.png)
+![](LC277-bg.png)
 
 
 Are we done? No. This final candidate X is just our best guess! Remember to check if X is the real celebrity!
