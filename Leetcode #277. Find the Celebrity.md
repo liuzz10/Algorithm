@@ -43,7 +43,9 @@ Here is a tree that demonstrates all possible paths. At each level we will add a
 
 Are we done? No. This final candidate X is just our best guess! Remember to check if X is the real celebrity!
 
-Why? Because we only compared the final candidate X once, we don't know the relationship between X and other numbers. Since there can be no celebrity, maybe X is not. We trust X just because other numbers are definitely not!
+Why? Because in the problem statement, "There will be exactly one celebrity if he/she is in the party...If there is no celebrity, return -1.". It's possible that there's no celebrity.
+
+Since we only compared the final candidate X once, we don't know the relationship between X and other numbers. Since there can be no celebrity, maybe X is not. We trust X just because other numbers are definitely not!
 
 So, we need one more step to check X:
 
