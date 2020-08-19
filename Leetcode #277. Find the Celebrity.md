@@ -7,7 +7,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
 You are given a helper function bool knows(a, b) which tells you whether A knows B. Implement a function int findCelebrity(n). There will be exactly one celebrity if he/she is in the party. Return the celebrity's label if there is a celebrity in the party. If there is no celebrity, return -1.
 
 ## Idea 1: Brute Force
-For each number i, We need to check if i is a celebrity or not. How to check? We check all knows(i, j) where j from 0 to n. Only when all pairs of knows(i, j) == 0 && all pairs of knows(j, i) ==1, we know i is a celebrity. Otherwise, i is not a celebrity.  
+For each number i, we need to check if i is a celebrity or not. How to check? We check all knows(i, j) where j from 0 to n. Only when all pairs of knows(i, j) == 0 && all pairs of knows(j, i) ==1, we know i is a celebrity. Otherwise, i is not a celebrity.  
 
 ### Time cost
 T(n) = O(n^2), since we need to check n numbers, and for each number we need to pair it with n-1 numbers to check. Another way to think about it is to check all n^2 pairs of knows(i, j).
