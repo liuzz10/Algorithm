@@ -41,7 +41,7 @@ Here is a tree that demonstrates all possible paths. At each level we will add a
 
 ![](LC277-bg.png)
 
-Are we done? No. This final candidate X is just our best guess! Remember to check if X is the real celebrity!
+Are we done? No. This final candidate X is just our best guess! Remember to check if X is the real celebrity.
 
 Why? Because in the problem statement, "There will be exactly one celebrity if he/she is in the party...If there is no celebrity, return -1.". It's possible that there's no celebrity.
 
