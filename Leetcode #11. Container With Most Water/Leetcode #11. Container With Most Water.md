@@ -1,12 +1,12 @@
 # Leetcode #11. Container With Most Water ||  Explanation For Beginners
-## Problem
+# Problem
 Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
-## Idea 1: Brute force
+# Idea 1: Brute force
 1. Calculate the area of all possible containers S(i, j). Here, S(i, j)=min(i, j)*(j-i).
 2. We need to use two pointers: i, j. When i=1，j moves from the integer next to i, which is 2, to the end, which is n. Calculate S(i, j)。Then, i moves to the next integer which is 2. j starts from i+1 to n. Repeatedly doing this until i reach n-1.
 3. We also need a variable to record the max area among all possible S. It’s easy. We set up and initialize maxArea=-1. If we find any S>max，we assign the value of S to maxArea. Otherwise, we don’t change the value of maxArea so that maxArea always stands for the max value among S.
 4. T(n)=O(n^2). One way to think about it is that we have a nested loop (j nested in i). Another way to think about it is “how many possible containers that n lines can make up, if we pick 2 every time”. We use combination to answer this question: the possible combinations in picking 2 lines from n will be C(n, 2)=n*(n-1)/2=O(n^2).
-## Idea 2: 2 pointers going inwards
+# Idea 2: 2 pointers going inwards
 I will reveal the solution first and then analyze and prove it.
 1. We need to use two pointers i and j. i starts from the 1st integer, j starts from the last integer.
 2. Then, we calculate the area S(1, n). Here, S(i, j)=min(i, j)*(j-i).
@@ -16,7 +16,7 @@ I will reveal the solution first and then analyze and prove it.
 5. Always move the shorter one to the next integer (move towards the center: i moves right-wards, j moves left-wards) and hold the longer one in place to form the new container.
 6. We also need a variable to record the max area among all possible S. It’s easy. We set up and initialize maxArea=-1. If we find any S>max, we assign the value of S to maxArea. Otherwise, we don’t change the value of maxArea so that maxArea always stands for the max value among S.
 
-## Explanation to the algorithm
+# Explanation to the algorithm
 
 1. This graph pictures the initialization stage: i < j. From the perspective of i=1, its best choice is j=n among all integers from j=2 to j=n. Why? Because the height of the container that i make up is at most i's length: if i=1 meets a longer one, the height will still be limited by i’s length; if i meets a shorter one, the height will be even worse. So, among all integers, i’s best strategy is to find the furthest integer, which is n.
 2. If you understand the above, you understand 3 general properties for any pair(i, j) :
