@@ -155,8 +155,10 @@ It sounds unbelievable. Let's prove. In this graph, the whole route is divided b
     so,
     
     k + $\sum_{i=n}^{X-1} gas[i]$ >= $\sum_{i=n}^{X-1} cost[i]$
+    
+![](LC134-proof-sigma.png)
 
 This formula shows that the sum of x remaining gas at #n and the gas being added must be able to cover the cost during the blue section. Therefore, as long as the green section works, the blue section must work.
 
 ### Simplify the code
-With this property, we don't have to circle around and check the stations in front of the starting point. So the loop is `for (int i = 0; i < gas.length; i++)`.
+With this property, we don't have to circle around and check the stations in front of the starting point. So the loop is `for (int i = 0; i < gas.length; i++)`.
