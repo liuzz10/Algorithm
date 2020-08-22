@@ -156,6 +156,8 @@ It sounds unbelievable. Let's prove. In this graph, the whole route is divided b
     
     k + $\sum_{i=n}^{X-1} gas[i]$ >= $\sum_{i=n}^{X-1} cost[i]$
     
+(If the above doesn't format, see the image below.)
+    
 ![](LC134-proof-sigma.png)
 
 This formula shows that the sum of x remaining gas at #n and the gas being added must be able to cover the cost during the blue section. Therefore, as long as the green section works, the blue section must work.
