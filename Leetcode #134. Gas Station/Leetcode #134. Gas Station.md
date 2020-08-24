@@ -112,7 +112,7 @@ With the brute force idea, if #1 doesn't work out we have to start with #2 to ch
 
 ![](LC134-p2-2.png)
 
-Why? Starting from #2 can equals to starting from #1, adding 0 gas, costing 0 from #1 to #2. That equals to, #1 doesn't provide us any benefits. 
+Why? Starting from #2 can equals to starting from #1, adding 1 gas (let's reduce 1 from the original gas = 2) from #1 to #2. That equals to, #1 doesn't provide us any benefits. 
 
 We knew that path(#1 -> #4) fails. That's being said, even if #1 provides us some extra benefits, we have gas remaining when arriving at #2, that gas doesn't sustain us to pass #4. 
 
